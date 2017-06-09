@@ -5504,6 +5504,16 @@ select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
 
+semantic-ui-react@60noy/semantic-ui-react:
+  version "0.68.5"
+  resolved "https://codeload.github.com/60noy/semantic-ui-react/tar.gz/91c3301b82ed58896d586438e2dacd3da81e69f6"
+  dependencies:
+    babel-runtime "^6.22.0"
+    classnames "^2.1.5"
+    debug "^2.6.3"
+    lodash "^4.17.2"
+    prop-types "15.5.8"
+
 semantic-ui-react@^0.68.5:
   version "0.68.5"
   resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.68.5.tgz#179bb89c387f8117026ca01f6e8490db1fd8e713"
