@@ -2,7 +2,6 @@ import React from 'react';
 
 const WatchMovie = () => (
   <div>
-
   watch
 </div>
 );

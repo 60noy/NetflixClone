@@ -1,14 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Menu } from 'semantic-ui-react';
 import SearchContainer from '../../containers/SearchContainer';
+import netflixLogo from './netflix_logo.png';
 
-const Navbar = ({ movies }) => (
-  <div>
-    <SearchContainer movies={movies} />
-  </div>
+// const styles = {
+//   container: {
+//     width: '100',
+//     display: 'flex',
+//     backgroundColor: '#141414',
+//   },
+//   title: {
+//     color: 'red',
+//     fontSize: '3em',
+//   },
+// };
+
+const Navbar = () => (
+  <Menu>
+    <Menu.Item>
+      <img src={netflixLogo} alt="netflix logo" />
+    </Menu.Item>
+    <Menu.Menu position="right">
+      <Menu.Item>
+        <SearchContainer />
+      </Menu.Item>
+    </Menu.Menu>
+  </Menu>
 );
 
-Navbar.propTypes = {
-  movies: PropTypes.array.isRequired,
-};
 export default Navbar;

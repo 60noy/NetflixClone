@@ -1,23 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let bgImg = '';
 const styles = {
   container: {
-    width: '100%',
-    heigth: '70%',
-    background: `url(${bgImg}) center no-repeat`,
+
   },
-  uppper: {
+  upper: {
 
   },
   year: {
 
   },
+  mins: {
+
+  },
+  center: {
+
+  },
+  title: {
+
+  },
+  description: {
+
+  },
 };
 
-const Slider = ({ img, title, description, year, mins }) => {
-  bgImg = () => img(<div style={[styles.container]}>
+const Slider = ({ img, title, description, year, mins }) => (
+  <div style={styles.container}>
+    {img}
     <div style={styles.upper}>
       <div style={styles.year}>
         {year}
@@ -34,10 +44,8 @@ const Slider = ({ img, title, description, year, mins }) => {
         {description}
       </div>
     </div>
-  </div>);
-};
-
-export default Slider;
+  </div>
+);
 
 Slider.propTypes = {
   img: PropTypes.string.isRequired,

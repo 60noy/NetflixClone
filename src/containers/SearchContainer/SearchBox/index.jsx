@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Search } from 'semantic-ui-react';
 
-const SearchBox = ({ text }) => (
-  <input type="text" value={text} />
+const SearchBox = ({ text, onChange }) => (
+  <Search
+    placeholder="hello world"
+    defaultValue={text}
+    onSearchChange={(e, data) => onChange(data)}
+    icon="search"
+  />
 );
-
-export default SearchBox;
 
 SearchBox.propTypes = {
   text: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
+export default SearchBox;

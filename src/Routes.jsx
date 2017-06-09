@@ -6,15 +6,15 @@ import NotFound from './screens/NotFound';
 import App from './screens/App';
 
 const Routes = () => (
-  <div>
-    <Router component={App}>
-      <Switch>
+  <Router>
+    <Switch>
+      <Route component={App}>
         <Route exact path="/" component={Home} />
         <Route path="/movie" component={WatchMovie} />
-        <Route path="*" component={NotFound} />
-      </Switch>
-    </Router>
-  </div>
+      </Route>
+      <Route path="*" component={NotFound} />
+    </Switch>
+  </Router>
 );
 
 export default Routes;

@@ -1,10 +1,11 @@
 // default screen with navbar
 import React from 'react';
-import Navbar from '../../components/Navbar';
+import NavbarContainer from '../../containers/NavbarContainer';
 
 const App = () => (
   <div>
-    <Navbar />
+    <NavbarContainer />
+    shared app
   </div>
 );
 
