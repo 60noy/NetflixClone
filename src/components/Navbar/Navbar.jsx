@@ -3,18 +3,6 @@ import { Menu } from 'semantic-ui-react';
 import SearchContainer from '../../containers/SearchContainer';
 import netflixLogo from './netflix_logo.png';
 
-// const styles = {
-//   container: {
-//     width: '100',
-//     display: 'flex',
-//     backgroundColor: '#141414',
-//   },
-//   title: {
-//     color: 'red',
-//     fontSize: '3em',
-//   },
-// };
-
 const Navbar = () => (
   <Menu>
     <Menu.Item>

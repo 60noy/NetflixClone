@@ -5,7 +5,7 @@ import { Search } from 'semantic-ui-react';
 const SearchBox =
  ({ onChange, isLoading, value, onResultSelect, resultRenderer, results }) => (
    <Search
-     placeholder="hello world"
+     placeholder="Movies/TV Shows"
      onSearchChange={(e, data) => onChange(data)}
      icon="search"
      loading={isLoading}

@@ -8,7 +8,7 @@ const MovieSearchItem = ({ title, img, description }) => (
       <div style={{ fontWeight: 'bold', paddingBottom: '5px' }}>{title}</div>
       {description}
     </div>
-    <img alt="img" src={img} style={{ align: 'right' }} align="right" />
+    <img alt="img" src={img} />
   </div>
 );
 
