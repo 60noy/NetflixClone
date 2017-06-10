@@ -29,7 +29,7 @@ class SliderContainer extends Component {
       const movie = {
         id,
         type: 'TVSHOW',
-        img: data.backdrop_path,
+        img: `http://image.tmdb.org/t/p/original/${data.backdrop_path}`,
         title: data.name,
         description: data.overview,
         rating: data.vote_average,
@@ -45,14 +45,16 @@ class SliderContainer extends Component {
     fetch(`https://api.themoviedb.org/3/movie/${id}?apikey=${key}`)
     .then(data => data.json())
     .then((data) => {
+      // TODO: change mins to the real api minutes variables,
+      //  I added mins without checking how it is declared
       const movie = {
         id,
-        type: 'TVSHOW',
-        img: data.backdrop_path,
+        type: 'MOVIE',
+        img: `http://image.tmdb.org/t/p/original/${data.backdrop_path}`,
         title: data.name,
         description: data.overview,
         rating: data.vote_average,
-        seasons: data.seasons.length,
+        mins: data.mins,
         year: moment(data.last_air_date, 'YYYY-MM-DD').format('YYYY'),
       };
       this.setState({ movie });

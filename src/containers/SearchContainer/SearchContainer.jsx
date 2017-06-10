@@ -42,7 +42,7 @@ class SearchContainer extends Component {
               id,
               title: name,
               description: overview && `${overview.substring(0, 80)}...`,
-              img: `https://image.tmdb.org/t/p/w92/${posterPath}`,
+              img: `http://image.tmdb.org/t/p/original/${posterPath}`,
             };
             if (formattedResult.title) {
               formattedResults.push(formattedResult);

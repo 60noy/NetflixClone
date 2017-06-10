@@ -26,7 +26,7 @@ class CategorySectionContainer extends Component {
       const results = data.results;
       _.forEach(results, (result) => {
         const movie = {
-          img: result.backdrop_path,
+          img: `http://image.tmdb.org/t/p/w185/${result.poster_path}`,
           title: result.name,
           rating: result.vote_average / 2,
           year: moment(result.first_air_date, 'YYYY-MM-DD').format('YYYY'),
@@ -43,7 +43,7 @@ class CategorySectionContainer extends Component {
     const { movies } = this.state;
     return (
       <div>
-        {_.isArray(movies) && movies.length > 2 && (<CategorySection
+        { movies.length > 0 && (<CategorySection
           movies={movies}
           name={name}
         />)

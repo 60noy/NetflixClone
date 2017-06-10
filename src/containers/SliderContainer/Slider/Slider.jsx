@@ -4,7 +4,6 @@ import { Rating, Button } from 'semantic-ui-react';
 
 const styles = {
   container: {
-    background: 'url(https://images8.alphacoders.com/564/thumb-1920-564997.jpg) no-repeat center center',
     minHeight: '60vh',
     minWidth: '100vw',
     display: 'flex',
@@ -20,10 +19,10 @@ const styles = {
     justifyContent: 'center',
   },
   year: {
-    fontSize: '1.2em',
+    fontSize: '1.4em',
   },
   mins: {
-    fontSize: '1.2em',
+    fontSize: '1.4em',
     marginLeft: '1%',
   },
   center: {
@@ -32,12 +31,12 @@ const styles = {
     alignItems: 'center',
   },
   title: {
-    fontSize: '4em',
+    fontSize: '5em',
     marginTop: '4%',
     fontWeight: 'bold',
   },
   description: {
-    fontSize: '1.3em',
+    fontSize: '1.6em',
     marginTop: '6%',
     overflox: 'hidden',
     lineHeight: 1.4,
@@ -48,7 +47,7 @@ const styles = {
 };
 
 const Slider = ({ img, title, description, rating, year, mins, seasons, type, onClickWatch }) => (
-  <div style={Object.assign({ background: `url(${img}) no-repeat center center` }, styles.container)}>
+  <div style={Object.assign({ backgroundImage: `url(${img})` }, styles.container)}>
     <div style={styles.upper}>
       <div style={styles.year}>
         {year}

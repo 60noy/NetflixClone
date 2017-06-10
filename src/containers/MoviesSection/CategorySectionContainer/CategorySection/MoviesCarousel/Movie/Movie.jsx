@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Movie = ({ title }) => (
-  <div >
-  hey {title}
+  <div>
+    {title}
   </div>
 );
 
