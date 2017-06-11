@@ -7,11 +7,11 @@ const styles = {
   container: {
     width: '100%',
     height: '100%',
-
     ':hover': {
       backgroundColor: '#000',
       opacity: 0.8,
       cursor: 'pointer',
+      transition: '.4s',
       color: '#E0E0E0',
     },
     color: 'transparent',
@@ -47,13 +47,9 @@ class Movie extends Component {
     };
   }
   shouldComponentUpdate = (nextProps, nextState) => {
-    console.log('update');
     if (this.state.hovered === nextState.hovered) {
-      console.log(`hoveredStt ${this.state.hovered}`);
-      console.log(`nextHovered ${nextState.hovered}`);
       return false;
     }
-
     return true;
   }
   makeHover = () => {

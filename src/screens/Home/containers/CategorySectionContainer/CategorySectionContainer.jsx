@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import _ from 'lodash';
-import key from '../../../../../utils/key';
-import CategorySection from './CategorySection';
+import key from '../../../../utils/key';
+import CategorySection from '../../components/CategorySection';
 
 class CategorySectionContainer extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class CategorySectionContainer extends Component {
       _.forEach(results, (result) => {
         const title = type === 'movie' ? result.title : result.name;
         const movie = {
-          img: `http://image.tmdb.org/t/p/w185/${result.poster_path}`,
+          img: `https://image.tmdb.org/t/p/w185/${result.poster_path}`,
           title,
           name: title,
           rating: result.vote_average / 2,

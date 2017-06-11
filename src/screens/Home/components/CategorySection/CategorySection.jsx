@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MoviesCarousel from './MoviesCarousel';
+import MoviesCarousel from '../MoviesCarousel';
 
 const styles = {
   name: {

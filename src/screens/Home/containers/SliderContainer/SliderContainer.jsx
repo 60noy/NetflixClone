@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Slider from './Slider';
+import Slider from '../../components/Slider';
 /* eslint-disable no-debugger */
 
 class SliderContainer extends Component {

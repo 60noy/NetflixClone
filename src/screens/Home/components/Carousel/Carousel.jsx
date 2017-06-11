@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
-import SliderContainer from './SliderContainer';
+import SliderContainer from '../../../Home/containers/SliderContainer';
 
 const settings = {
   infinite: true,

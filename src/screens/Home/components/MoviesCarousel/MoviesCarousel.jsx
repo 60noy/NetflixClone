@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import Radium from 'radium';
-import Movie from './Movie';
+import Movie from '../Movie';
 
 const styles = {
   container: {

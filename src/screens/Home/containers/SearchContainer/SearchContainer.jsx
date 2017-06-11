@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { Grid } from 'semantic-ui-react';
 import _ from 'lodash';
-import SearchBox from './SearchBox';
+import SearchBox from '../../components/SearchBox';
 import key from '../../../../utils/key';
-import MovieSearchItem from './MovieSearchItem';
+import MovieSearchItem from '../../components/MovieSearchItem';
 
 class SearchContainer extends Component {
   constructor(props) {
@@ -25,7 +25,6 @@ class SearchContainer extends Component {
     fetch(`https://api.themoviedb.org/3/search/multi?api_key=${key}&language=en-US&query=${value}&page=1&include_adult=false`)
       .then(data => data.json())
       .then((data) => {
-        console.log(`movies${JSON.stringify(data)}`);
         let results = data.results;
         if (results && results.length > 0) {
           results = data.results;
@@ -61,7 +60,6 @@ class SearchContainer extends Component {
   }
   // handles movie selection - navigates to the movie's page by its id
   handleResultSelect = (movie) => {
-    console.log(movie);
     this.setState({ value: movie.title });
     browserHistory.push(`/movie/${movie.id}`);
   }

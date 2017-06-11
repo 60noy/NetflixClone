@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import CategorySectionContainer from './CategorySectionContainer';
+import CategorySectionContainer from '../../../Home/containers/CategorySectionContainer';
 import key from '../../../../utils/key';
 
 let id = 0;
