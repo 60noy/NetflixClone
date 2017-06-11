@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
-import SearchContainer from '../../containers/SearchContainer';
+import SearchContainer from '../../../Home/containers/SearchContainer';
 import netflixLogo from './netflix_logo.png';
 
 const Navbar = () => (

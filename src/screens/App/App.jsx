@@ -1,11 +1,10 @@
 // default screen with navbar
 import { Route, Switch } from 'react-router-dom';
 import React from 'react';
-import Navbar from '../../components/Navbar';
+import Navbar from './components/Navbar';
 import Home from '../Home';
 import NotFound from '../NotFound';
 import WatchMovie from '../WatchMovie';
-
 
 const App = () => (
   <div>

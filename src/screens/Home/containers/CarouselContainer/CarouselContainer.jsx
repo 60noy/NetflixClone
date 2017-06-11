@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import moment from 'moment';
-import moviesAndTvShows from '../../utils/carouselMoviesAndShows';
+import moviesAndTvShows from '../../../../utils/carouselMoviesAndShows';
 import Carousel from './Carousel';
 // header carousel
 class CarouselContainer extends Component {

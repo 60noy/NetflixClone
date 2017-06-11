@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { Rating, Button } from 'semantic-ui-react';
 
 const styles = {
-  container: {
-
-  },
   upper: {
     display: 'flex',
     width: '100%',
@@ -53,7 +50,7 @@ const styles = {
 };
 
 const Slider = ({ img, title, description, rating, year, onClickWatch }) => (
-  <div style={Object.assign({ backgroundImage: `url(${img})` }, styles.container)}>
+  <div style={{ backgroundImage: `url(${img}` }}>
     <div style={styles.overlay}>
       <div style={styles.upper}>
         <div style={styles.year}>

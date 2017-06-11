@@ -4,7 +4,7 @@ import { Grid } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 import _ from 'lodash';
 import SearchBox from './SearchBox';
-import key from '../../utils/key';
+import key from '../../../../utils/key';
 import MovieSearchItem from './MovieSearchItem';
 
 class SearchContainer extends Component {
