@@ -29,7 +29,7 @@ class CategorySectionContainer extends Component {
           img: `http://image.tmdb.org/t/p/w185/${result.poster_path}`,
           title: result.name,
           rating: result.vote_average / 2,
-          year: moment(result.first_air_date, 'YYYY-MM-DD').format('YYYY'),
+          year: type === 'movie' ? moment(result.release_date, 'YYYY-MM-DD').format('YYYY') : moment(result.last_air_date, 'YYYY-MM-DD').format('YYYY'),
           id: result.id,
         };
         movies.push(movie);

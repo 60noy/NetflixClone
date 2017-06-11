@@ -4,14 +4,7 @@ import { Rating, Button } from 'semantic-ui-react';
 
 const styles = {
   container: {
-    minHeight: '60vh',
-    minWidth: '100vw',
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    alignItems: 'center',
-    filter: 'brightness(70%)',
-    color: '#fff',
+
   },
   upper: {
     display: 'flex',
@@ -20,10 +13,7 @@ const styles = {
   },
   year: {
     fontSize: '1.4em',
-  },
-  mins: {
-    fontSize: '1.4em',
-    marginLeft: '1%',
+    paddingRight: '1%',
   },
   center: {
     display: 'flex',
@@ -37,38 +27,53 @@ const styles = {
   },
   description: {
     fontSize: '1.6em',
-    marginTop: '6%',
+    marginTop: '4%',
     overflox: 'hidden',
     lineHeight: 1.4,
     alignContent: 'center',
     width: '36em',
 
   },
+  btn: {
+    paddingBottom: '6%',
+    bottom: 0,
+    position: 'absolute',
+  },
+  overlay: {
+    background: '#000',
+    opacity: 0.7,
+    width: '100%',
+    minHeight: '60vh',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
+    color: '#fff',
+  },
 };
 
-const Slider = ({ img, title, description, rating, year, mins, seasons, type, onClickWatch }) => (
+const Slider = ({ img, title, description, rating, year, onClickWatch }) => (
   <div style={Object.assign({ backgroundImage: `url(${img})` }, styles.container)}>
-    <div style={styles.upper}>
-      <div style={styles.year}>
-        {year}
+    <div style={styles.overlay}>
+      <div style={styles.upper}>
+        <div style={styles.year}>
+          {year}
+        </div>
+        <Rating icon="star" rating={rating} disabled maxRating={5} />
       </div>
-      <div style={styles.mins}>
-        {type === 'TVSHOW' ? ` ${seasons} seasons` : ` ${mins} MINS`}
+      <div style={styles.center}>
+        <div style={styles.title}>
+          {title}
+        </div>
+        <div style={styles.description}>
+          {description}
+        </div>
       </div>
-      <Rating icon="star" defaultRating={rating} disabled />
-    </div>
-    <div style={styles.center}>
-      <div style={styles.title}>
-        {title}
-      </div>
-      <div style={styles.description}>
-        {description}
-      </div>
-    </div>
-    <div style={{ padding: '2em' }}>
-      <Button onClick={() => onClickWatch} color="red">
+      <div style={styles.btn}>
+        <Button onClick={() => console.log(onClickWatch, 'button')} color="red">
       Watch Trailer
     </Button>
+      </div>
     </div>
   </div>
 );
@@ -78,21 +83,13 @@ Slider.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
-  mins: PropTypes.number.isRequired,
   rating: PropTypes.number.isRequired,
-  seasons: PropTypes.number,
-  type: PropTypes.oneOf(['TVSHOW', 'MOVIE']),
   onClickWatch: PropTypes.func.isRequired,
 };
 
 Slider.defaultProps = {
-  img: 'http://assets1.ignimgs.com/2016/05/24/overwatch1280jpg-6daa73_1280w.jpg',
-  title: 'Overwatch',
-  description: 'Tracer is here!',
-  year: '1996',
-  mins: 146,
+
   seasons: 5,
-  type: 'TVSHOW',
 
 };
 export default Slider;

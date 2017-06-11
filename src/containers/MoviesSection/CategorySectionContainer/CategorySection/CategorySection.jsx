@@ -36,8 +36,4 @@ CategorySection.propTypes = {
   })).isRequired,
 };
 
-CategorySection.defaultProps = {
-  name: 'default',
-  movies: [{ name: 'noy', year: 2014, img: 'sa', rating: 4 }],
-};
 export default CategorySection;
