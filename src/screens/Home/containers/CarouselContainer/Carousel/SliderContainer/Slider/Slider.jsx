@@ -68,8 +68,8 @@ const Slider = ({ img, title, description, rating, year, onClickWatch }) => (
       </div>
       <div style={styles.btn}>
         <Button onClick={() => console.log(onClickWatch, 'button')} color="red">
-      Watch Trailer
-    </Button>
+          Watch Trailer
+        </Button>
       </div>
     </div>
   </div>

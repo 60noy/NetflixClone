@@ -1,9 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+};
 // TODO: add hover effect - darker background using Radium
 const MovieSearchItem = ({ title, img, description }) => (
-  <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+  <div style={styles.container}>
     <div style={{}}>
       <div style={{ fontWeight: 'bold', paddingBottom: '5px' }}>{title}</div>
       {description}
@@ -17,4 +25,4 @@ MovieSearchItem.propTypes = {
   img: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
-export default MovieSearchItem;
+export default Radium(MovieSearchItem);
