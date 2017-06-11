@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { browserHistory } from 'react-router';
 import { Grid } from 'semantic-ui-react';
-import { withRouter } from 'react-router-dom';
 import _ from 'lodash';
 import SearchBox from './SearchBox';
 import key from '../../../../utils/key';
@@ -64,7 +63,7 @@ class SearchContainer extends Component {
   handleResultSelect = (movie) => {
     console.log(movie);
     this.setState({ value: movie.title });
-    this.props.history.push(`/movie/${movie.id}`);
+    browserHistory.push(`/movie/${movie.id}`);
   }
   resultRenderer = ({ title, description, img }) =>
     <MovieSearchItem title={title} description={description} img={img} />
@@ -73,7 +72,7 @@ class SearchContainer extends Component {
     const { value, movies, isLoading } = this.state;
     return (
       <Grid>
-        <Grid.Column width={8}>
+        <Grid.Column>
           <SearchBox
             onChange={this.handleInputChange}
             onResultSelect={this.handleResultSelect}
@@ -88,8 +87,4 @@ class SearchContainer extends Component {
   }
 }
 
-SearchContainer.propTypes = {
-  history: PropTypes.object.isRequired,  // eslint-disable-line react/forbid-prop-types
-};
-
-export default withRouter(SearchContainer);
+export default SearchContainer;

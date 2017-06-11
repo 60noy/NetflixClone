@@ -6,7 +6,7 @@ import netflixLogo from '../../../../images/logo.png';
 const Navbar = () => (
   <div >
     <Menu>
-      <Menu.Item borderless>
+      <Menu.Item>
         <img src={netflixLogo} alt="netflix logo" />
       </Menu.Item>
       <Menu.Menu position="right">

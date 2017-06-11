@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import CategorySectionContainer from './CategorySectionContainer';
-import key from '../../utils/key';
+import key from '../../../../utils/key';
 
 let id = 0;
 
@@ -63,7 +63,7 @@ class MoviesSection extends Component {
   render() {
     const { categories } = this.state;
     return (
-      <div style={{ paddingTop: '2%' }}>
+      <div style={{ paddingTop: '2%', background: '#212121' }}>
         {categories.map(categorySectionRenderer)}
       </div>
     );

@@ -1,20 +1,15 @@
 // default screen with navbar
-import { Route, Switch } from 'react-router-dom';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Navbar from './components/Navbar';
-import Home from '../Home';
-import NotFound from '../NotFound';
-import WatchMovie from '../WatchMovie';
 
-const App = () => (
+const App = props => (
   <div>
     <Navbar />
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/movie" component={WatchMovie} />
-      <Route path="*" component={NotFound} />
-    </Switch>
+    {props.children}
   </div>
 );
-
+App.propTypes = {
+  children: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+};
 export default App;

@@ -56,7 +56,13 @@ const Slider = ({ img, title, description, rating, year, onClickWatch }) => (
         <div style={styles.year}>
           {year}
         </div>
-        <Rating icon="star" rating={rating} disabled maxRating={5} />
+        <Rating
+          icon="star"
+          rating={rating}
+          disabled
+          maxRating={5}
+          size="large"
+        />
       </div>
       <div style={styles.center}>
         <div style={styles.title}>

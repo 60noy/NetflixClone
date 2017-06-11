@@ -8,6 +8,7 @@ const styles = {
     paddingBottom: '2%',
     fontSize: '2.4em',
     paddingLeft: '4%',
+    color: '#fff',
   },
   moviesRow: {
     marginBottom: '2%',

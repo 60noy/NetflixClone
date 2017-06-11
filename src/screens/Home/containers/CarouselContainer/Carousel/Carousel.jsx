@@ -11,13 +11,14 @@ const settings = {
   autoscroller: true,
   fade: true,
   draggable: false,
+  autoplaySpeed: 5000,
   autoplay: true,
 };
 const Carousel = ({ movies }) => (
   <Slider {...settings}>
     {movies.map(movie =>
         (
-          <div>
+          <div key={movie.id}>
             <SliderContainer
               movie={movie}
             />

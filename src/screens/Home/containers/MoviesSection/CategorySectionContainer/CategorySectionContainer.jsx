@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import _ from 'lodash';
-import key from '../../../utils/key';
+import key from '../../../../../utils/key';
 import CategorySection from './CategorySection';
 
 class CategorySectionContainer extends Component {
@@ -25,11 +25,13 @@ class CategorySectionContainer extends Component {
     .then((data) => {
       const results = data.results;
       _.forEach(results, (result) => {
+        const title = type === 'movie' ? result.title : result.name;
         const movie = {
           img: `http://image.tmdb.org/t/p/w185/${result.poster_path}`,
-          title: result.name,
+          title,
+          name: title,
           rating: result.vote_average / 2,
-          year: type === 'movie' ? moment(result.release_date, 'YYYY-MM-DD').format('YYYY') : moment(result.last_air_date, 'YYYY-MM-DD').format('YYYY'),
+          year: type === 'movie' ? moment(result.release_date, 'YYYY-MM-DD').format('YYYY') : moment(result.first_air_date, 'YYYY-MM-DD').format('YYYY'),
           id: result.id,
         };
         movies.push(movie);

@@ -1,15 +1,17 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 import NotFound from './screens/NotFound';
-// import WatchMovie from './screens/WatchMovie';
+import WatchMovie from './screens/WatchMovie';
+import Home from './screens/Home';
 import App from './screens/App';
 
 const Routes = () => (
-  <Router>
-    <Switch>
-      <Route exact path="/" component={App} />
-      <Route path="*" component={NotFound} />
-    </Switch>
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home} />
+      <Route path="/movie" component={WatchMovie} />
+    </Route>
+    <Route path="*" component={NotFound} />
   </Router>
 );
 
