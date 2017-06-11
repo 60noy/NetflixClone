@@ -4,13 +4,13 @@ import MoviesCarousel from './MoviesCarousel';
 
 const styles = {
   name: {
-    paddingTop: '4%',
+    paddingTop: '2%',
     paddingBottom: '2%',
     fontSize: '2.4em',
     paddingLeft: '4%',
   },
   moviesRow: {
-    marginBottom: '4%',
+    marginBottom: '2%',
   },
 
 };
